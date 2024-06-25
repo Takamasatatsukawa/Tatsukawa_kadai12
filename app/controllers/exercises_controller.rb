@@ -11,6 +11,7 @@ class ExercisesController < ApplicationController
    @foods = Shop.left_outer_joins(foods: :orders)
                 .where(orders: { id: nil })
                 .distinct
+   @foods
   end
 
   def exercise3 
